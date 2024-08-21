@@ -37,4 +37,4 @@ jobs:
         port: ${{ secrets.LAB_PORT }}
         connect_timeout: 10s 
         first_ssh: |
-          sudo curl -I -u admin:1138e6b5fef7f1437536871262248dbe6c http://localhost:8080/job/TomcatDeploymentGitHubActions/build?token=buildtoken
+          sudo curl -I -u admin:1138e6b5fef7f1437536871262248dbe6c http://localhost:8080/job/TomcatDeploymentGitHubActions/build?token=demo_token
