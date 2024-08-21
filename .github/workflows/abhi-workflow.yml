@@ -6,7 +6,7 @@ on:
     branches: ["master"]
 
 env:
-  owner_name: Abhi
+  owner_name: Yeswanth
 
 jobs:
   build_test:
@@ -28,7 +28,7 @@ jobs:
     - name: Test with Maven
       run: mvn -B test --file pom.xml
     
-    - name: Invoke Jenkins Deployment Job
+    - name: connect to Lab and trigger jenkins job
       uses: cross-the-world/ssh-scp-ssh-pipelines@latest 
       with:
         host: ${{ secrets.LAB_HOSTNAME }}
