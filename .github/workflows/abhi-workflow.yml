@@ -28,7 +28,7 @@ jobs:
     - name: Test with Maven
       run: mvn -B test --file pom.xml
     
-    - name: connect to LAb and trigger jenkins job
+    - name: Invoke Jenkins Deployment Job
       uses: cross-the-world/ssh-scp-ssh-pipelines@latest 
       with:
         host: ${{ secrets.LAB_HOSTNAME }}
@@ -37,4 +37,4 @@ jobs:
         port: ${{ secrets.LAB_PORT }}
         connect_timeout: 10s 
         first_ssh: |
-          sudo curl -I -u admin:1138e6b5fef7f1437536871262248dbe6c http://localhost:8080/job/GitHubActions_TomcatDeployment/build?token=demo_token
+          sudo curl -I -u admin:1138e6b5fef7f1437536871262248dbe6c http://localhost:8080/job/TomcatDeploymentGitHubActions/build?token=buildtoken
